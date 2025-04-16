@@ -34,6 +34,11 @@ function reverse(word) {
 
 reverse(word)
 // task 4
+let str_f = prompt("Введите строку")
+function isPalindrome(str_f) {
+    str_f = str_f.toLowerCase().replace(/\s/g, ""); 
+    return str_f === str_f.split("").reverse().join("");
+}
 
 // task 5
 let number = prompt("Введите число")
@@ -64,8 +69,45 @@ function findArray(array) {
 findArray(array)
 // task 7
 let  arraySeven = [1, 2, 2, 11, 11, 34, 3, 44]
-let newArray = []
-
+function uniq(arraySeven) {
+    return [...new Set(arraySeven)];
+}
 // task 8
+let str_e = prompt("Введите строку")
+
+function countVowels(str_e) {
+    const vowels = ['а', 'я', 'о', 'ё', 'у', 'ю', 'ы', 'и', 'э', 'е'];
+    str_e = str_e.toLowerCase();
+    let count = 0;
+
+    for (let char of str_e) {
+        if (vowels.includes(char)) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
 // task 9
+function bubbleSort(arr) {
+    let n = arr.length;
+    for (let i = 0; i < n - 1; i++) {
+        for (let j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+            }
+        }
+    }
+    return arr;
+}
+
 // task 10
+
+async function getDate() {
+    const response = await fetch("https://jsonplaceholder.typicode.com/todos/")
+    const result = await response.json()
+    console.log(result)
+}
+
+getDate()
