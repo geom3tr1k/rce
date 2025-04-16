@@ -34,11 +34,13 @@ function reverse(word) {
 
 reverse(word)
 // task 4
+
 let str_f = prompt("Введите строку")
-function isPalindrome(str_f) {
+function palindrome(str_f) {
     str_f = str_f.toLowerCase().replace(/\s/g, ""); 
     return str_f === str_f.split("").reverse().join("");
 }
+palindrome(str_f)
 
 // task 5
 let number = prompt("Введите число")
@@ -72,10 +74,12 @@ let  arraySeven = [1, 2, 2, 11, 11, 34, 3, 44]
 function uniq(arraySeven) {
     return [...new Set(arraySeven)];
 }
+
+uniq(arraySeven)
 // task 8
 let str_e = prompt("Введите строку")
 
-function countVowels(str_e) {
+function count(str_e) {
     const vowels = ['а', 'я', 'о', 'ё', 'у', 'ю', 'ы', 'и', 'э', 'е'];
     str_e = str_e.toLowerCase();
     let count = 0;
@@ -89,8 +93,11 @@ function countVowels(str_e) {
     return count;
 }
 
+count(str_e)
+
+
 // task 9
-function bubbleSort(arr) {
+function sortArr(arr) {
     let n = arr.length;
     for (let i = 0; i < n - 1; i++) {
         for (let j = 0; j < n - i - 1; j++) {
@@ -102,6 +109,7 @@ function bubbleSort(arr) {
     return arr;
 }
 
+sortArr(arr)
 // task 10
 
 async function getDate() {
