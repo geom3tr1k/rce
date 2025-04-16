@@ -1,5 +1,5 @@
-const input = document.getElementById('colorInput');
-const button = document.getElementById('changeColorBtn');
+const input = document.getElementById('color');
+const button = document.getElementById('btn');
 
 button.addEventListener('click', () => {
     const color = input.value.trim(); 
